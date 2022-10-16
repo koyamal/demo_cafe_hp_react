@@ -6,7 +6,7 @@ import { MenuItems } from "../../../data/menu/menuItems";
 
 export const ShowMenu: VFC = () => {
   return (
-    <Wrap spacing="20px" ml={4}>
+    <Wrap spacing="20px" ml={4} mt={4}>
       {MenuItems.map((menu) => {
         return (
           <>
