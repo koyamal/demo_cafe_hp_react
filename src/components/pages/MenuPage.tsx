@@ -1,9 +1,8 @@
 import { memo, VFC } from "react";
+
 import { Header } from "../organisms/layout/Header";
-
 import { MenuItem } from "../organisms/menu/MenuItem";
-
-type Menu = { imageUrl: string; name: string; price: string };
+import { Menu } from "../../types/menu/menu";
 
 export const MenuPage: VFC = memo(() => {
   const menuItems: Menu[] = [
