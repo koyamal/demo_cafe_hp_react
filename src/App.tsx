@@ -7,8 +7,14 @@ export default function App() {
     <ChakraProvider>
       <BrowserRouter>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Header />
+          </Route>
+          <Route exact path="/menu">
+            menu
+          </Route>
+          <Route exact path="/test">
+            <div>test</div>
           </Route>
         </Switch>
       </BrowserRouter>
