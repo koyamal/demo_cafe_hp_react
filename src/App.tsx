@@ -5,7 +5,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact="true" path="/">
+        <Route exact path="/">
           <div>hello</div>
         </Route>
       </Switch>
