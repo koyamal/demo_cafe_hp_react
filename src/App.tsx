@@ -9,7 +9,7 @@ export default function App() {
           <>
             <Flex
               as="nav"
-              bg="#319795"
+              bg="teal.100"
               color="gray.50"
               align="center"
               justify="space-between"
