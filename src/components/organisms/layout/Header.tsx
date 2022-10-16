@@ -11,6 +11,9 @@ export const Header: VFC = memo(() => {
   const onClickMenuPage = useCallback(() => {
     history.push("/menu");
   }, []);
+  const onClickInfoPage = useCallback(() => {
+    history.push("/info");
+  }, []);
 
   return (
     <>
@@ -32,6 +35,7 @@ export const Header: VFC = memo(() => {
           </Heading>
         </Flex>
         <Link onClick={onClickMenuPage}>Menu</Link>
+        <Link onClick={onClickInfoPage}>Info</Link>
       </Flex>
     </>
   );

@@ -13,8 +13,8 @@ export const Router: VFC = () => {
       <Route exact path="/menu">
         <MenuPage />
       </Route>
-      <Route exact path="/test">
-        <div>test</div>
+      <Route exact path="/info">
+        <div>info</div>
       </Route>
     </Switch>
   );
