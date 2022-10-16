@@ -3,6 +3,7 @@ import { memo, VFC } from "react";
 import { Header } from "../organisms/layout/Header";
 import { MenuItem } from "../organisms/menu/MenuItem";
 import { Menu } from "../../types/menu/menu";
+import { Wrap, WrapItem } from "@chakra-ui/react";
 
 export const MenuPage: VFC = memo(() => {
   const menuItems: Menu[] = [
@@ -20,16 +21,22 @@ export const MenuPage: VFC = memo(() => {
   return (
     <>
       <Header />
-      {menuItems.map((menu) => {
-        return (
-          <MenuItem
-            key={menu.name}
-            imageUrl={menu.imageUrl}
-            name={menu.name}
-            price={menu.price}
-          />
-        );
-      })}
+      <Wrap spacing="20px">
+        {menuItems.map((menu) => {
+          return (
+            <>
+              <WrapItem>
+                <MenuItem
+                  key={menu.name}
+                  imageUrl={menu.imageUrl}
+                  name={menu.name}
+                  price={menu.price}
+                />
+              </WrapItem>
+            </>
+          );
+        })}
+      </Wrap>
     </>
   );
 });

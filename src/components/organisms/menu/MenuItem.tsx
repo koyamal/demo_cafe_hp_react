@@ -1,13 +1,9 @@
 import { Box, Image, Stack, Text } from "@chakra-ui/react";
 import { VFC } from "react";
 
-type Props = {
-  imageUrl: string;
-  name: string;
-  price: string;
-};
+import { Menu } from "../../../types/menu/menu";
 
-export const MenuItem: VFC<Props> = (props) => {
+export const MenuItem: VFC<Menu> = (props) => {
   const { imageUrl, name, price } = props;
   return (
     <>
