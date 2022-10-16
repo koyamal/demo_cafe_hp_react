@@ -5,7 +5,10 @@ import { useHistory } from "react-router-dom";
 
 export const Header: VFC = memo(() => {
   const history = useHistory();
-  const onClickMenu = useCallback(() => {
+  const onClickTopPage = useCallback(() => {
+    history.push("/");
+  }, []);
+  const onClickMenuPage = useCallback(() => {
     history.push("/menu");
   }, []);
 
@@ -20,11 +23,15 @@ export const Header: VFC = memo(() => {
         padding={{ base: 3, md: 5 }}
       >
         <Flex align="center" as="a" mr={8} _hover={{ cursor: "pointer" }}>
-          <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
+          <Heading
+            as="h1"
+            fontSize={{ base: "md", md: "lg" }}
+            onClick={onClickTopPage}
+          >
             Demo Demo Cafe
           </Heading>
         </Flex>
-        <Link onClick={onClickMenu}>Menu</Link>
+        <Link onClick={onClickMenuPage}>Menu</Link>
       </Flex>
     </>
   );
