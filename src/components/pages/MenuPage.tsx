@@ -6,7 +6,13 @@ export const MenuPage: VFC = memo(() => {
   return (
     <>
       <Header />
-      <Box bg="white" w="260px" h="260px" shadow="md">
+      <Box
+        bg="white"
+        w="260px"
+        h="260px"
+        shadow="md"
+        _hover={{ opacity: 0.8, cursor: "pointer" }}
+      >
         <Stack textAlign="center">
           <Image
             boxSize="180px"
