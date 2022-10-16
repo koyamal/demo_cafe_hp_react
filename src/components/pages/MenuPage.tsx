@@ -13,9 +13,14 @@ export const MenuPage: VFC = memo(() => {
       price: "180"
     },
     {
-      imageUrl: "https://source.unsplash.com/NZMeJsrMC8U",
+      imageUrl: "https://source.unsplash.com/qEcWgrTG578",
       name: "tea",
       price: "170"
+    },
+    {
+      imageUrl: "https://source.unsplash.com/nXKWLn8y9qE",
+      name: "cake",
+      price: "250"
     }
   ];
   return (
