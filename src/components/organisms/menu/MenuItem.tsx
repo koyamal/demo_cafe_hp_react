@@ -1,7 +1,14 @@
 import { Box, Image, Stack, Text } from "@chakra-ui/react";
 import { VFC } from "react";
 
-export const MenuItem: VFC = () => {
+type Props = {
+  imageUrl: string;
+  name: string;
+  price: string;
+};
+
+export const MenuItem: VFC<Props> = (props) => {
+  const { imageUrl, name, price } = props;
   return (
     <>
       <Box
@@ -12,13 +19,9 @@ export const MenuItem: VFC = () => {
         _hover={{ opacity: 0.8, cursor: "pointer" }}
       >
         <Stack textAlign="center">
-          <Image
-            boxSize="180px"
-            src="https://source.unsplash.com/NZMeJsrMC8U"
-            m="auto"
-          />
-          <Text>Coffee</Text>
-          <Text>¥180</Text>
+          <Image boxSize="180px" src={imageUrl} m="auto" />
+          <Text>{name}</Text>
+          <Text>{`¥${price}`}</Text>
         </Stack>
       </Box>
     </>

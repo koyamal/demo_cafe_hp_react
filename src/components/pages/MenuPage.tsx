@@ -7,7 +7,11 @@ export const MenuPage: VFC = memo(() => {
   return (
     <>
       <Header />
-      <MenuItem />
+      <MenuItem
+        imageUrl="https://source.unsplash.com/NZMeJsrMC8U"
+        name="caffee"
+        price="180"
+      />
     </>
   );
 });
