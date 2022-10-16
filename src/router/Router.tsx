@@ -2,6 +2,7 @@ import { VFC } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import { TopPage } from "../components/pages/TopPage";
+import { MenuPage } from "../components/pages/MenuPage";
 
 export const Router: VFC = () => {
   return (
@@ -10,7 +11,7 @@ export const Router: VFC = () => {
         <TopPage />
       </Route>
       <Route exact path="/menu">
-        menu
+        <MenuPage />
       </Route>
       <Route exact path="/test">
         <div>test</div>
