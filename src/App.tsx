@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 
-import { Header } from "./components/organisms/layout/Header";
+import { TopPage } from "./components/pages/TopPage";
 export default function App() {
   return (
     <ChakraProvider>
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Header />
+            <TopPage />
           </Route>
           <Route exact path="/menu">
             menu
