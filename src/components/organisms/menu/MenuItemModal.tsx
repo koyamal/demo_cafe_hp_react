@@ -43,11 +43,16 @@ export const MenuItemModal: VFC<Props> = (props) => {
               <TabPanels>
                 <TabPanel>
                   <HStack spacing={2}>
-                    {itemInfo.allergens.map((allergen) => (
-                      <Tag key={allergen} colorScheme="orange">
-                        {allergen}
-                      </Tag>
-                    ))}
+                    {console.log(itemInfo.allergens)}
+                    {itemInfo.allergens.length !== 0 ? (
+                      itemInfo.allergens.map((allergen) => (
+                        <Tag key={allergen} colorScheme="orange">
+                          {allergen}
+                        </Tag>
+                      ))
+                    ) : (
+                      <>None</>
+                    )}
                   </HStack>
                 </TabPanel>
                 <TabPanel>
