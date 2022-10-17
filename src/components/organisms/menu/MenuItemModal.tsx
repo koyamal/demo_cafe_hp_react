@@ -69,28 +69,27 @@ export const MenuItemModal: VFC<Props> = memo((props) => {
                       <Tbody>
                         <Tr>
                           <Td>Calories</Td>
-                          <Td>{itemInfo.nutritions.calories}</Td>
+                          <Td isNumeric>{itemInfo.nutritions.calories}</Td>
                         </Tr>
                         <Tr>
                           <Td>Proteins</Td>
-                          <Td>{itemInfo.nutritions.proteins}</Td>
+                          <Td isNumeric>{itemInfo.nutritions.proteins}</Td>
                         </Tr>
                         <Tr>
                           <Td>Fat</Td>
-                          <Td>{itemInfo.nutritions.fat}</Td>
+                          <Td isNumeric>{itemInfo.nutritions.fat}</Td>
                         </Tr>
                         <Tr>
                           <Td>Sodium</Td>
-                          <Td>{itemInfo.nutritions.sodium}</Td>
+                          <Td isNumeric>{itemInfo.nutritions.sodium}</Td>
                         </Tr>
                         <Tr>
                           <Td>Carbohydrate</Td>
-                          <Td>{itemInfo.nutritions.carbohydrate}</Td>
+                          <Td isNumeric>{itemInfo.nutritions.carbohydrate}</Td>
                         </Tr>
                       </Tbody>
                     </Table>
                   </TableContainer>
-                  <p>{itemInfo.nutritions.calories}</p>
                 </TabPanel>
               </TabPanels>
             </Tabs>
