@@ -19,9 +19,6 @@ import { Menu } from "../../../types/menu/menu";
 
 export const MenuItem: VFC<Menu> = (props) => {
   const { imageUrl, name, price } = props;
-  const onClickShowDetail = () => {
-    alert("Menu clicked");
-  };
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
