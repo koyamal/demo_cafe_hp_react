@@ -1,26 +1,8 @@
-import {
-  Box,
-  Button,
-  Image,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  Stack,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-  Text,
-  useDisclosure
-} from "@chakra-ui/react";
+import { Box, Image, Stack, Text, useDisclosure } from "@chakra-ui/react";
 import { VFC } from "react";
 
 import { Menu } from "../../../types/menu/menu";
+import { MenuItemModal } from "./MenuItemModal";
 
 export const MenuItem: VFC<Menu> = (props) => {
   const { imageUrl, name, price } = props;
@@ -42,37 +24,7 @@ export const MenuItem: VFC<Menu> = (props) => {
           <Text>{`¥${price}`}</Text>
         </Stack>
       </Box>
-
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{name}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Tabs>
-              <TabList>
-                <Tab>Allergen</Tab>
-                <Tab>Nutrition Information</Tab>
-              </TabList>
-
-              <TabPanels>
-                <TabPanel>
-                  <p>wheat</p>
-                </TabPanel>
-                <TabPanel>
-                  <p>120kcal</p>
-                </TabPanel>
-              </TabPanels>
-            </Tabs>
-          </ModalBody>
-
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+      <MenuItemModal isOpen={isOpen} onClose={onClose} itemInfo={props} />
     </>
   );
 };
