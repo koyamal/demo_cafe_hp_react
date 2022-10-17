@@ -9,15 +9,13 @@ export const ShowMenu: VFC = () => {
     <Wrap spacing="20px" ml={4} mt={4}>
       {MenuItems.map((menu) => {
         return (
-          <>
-            <WrapItem key={menu.name}>
-              <MenuItem
-                imageUrl={menu.imageUrl}
-                name={menu.name}
-                price={menu.price}
-              />
-            </WrapItem>
-          </>
+          <WrapItem key={menu.name}>
+            <MenuItem
+              imageUrl={menu.imageUrl}
+              name={menu.name}
+              price={menu.price}
+            />
+          </WrapItem>
         );
       })}
     </Wrap>
