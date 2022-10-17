@@ -62,7 +62,7 @@ export const MenuItemModal: VFC<Props> = memo((props) => {
                 </TabPanel>
                 <TabPanel>
                   <TableContainer>
-                    <Table variant="simple">
+                    <Table variant="simple" colorScheme="orange">
                       <TableCaption placement="top">
                         {`Nutrition Information of ${itemInfo.name}`}
                       </TableCaption>
@@ -96,7 +96,7 @@ export const MenuItemModal: VFC<Props> = memo((props) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button colorScheme="orange" mr={3} onClick={onClose}>
               Close
             </Button>
           </ModalFooter>
