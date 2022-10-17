@@ -1,6 +1,7 @@
 import { VFC } from "react";
 import {
   Button,
+  HStack,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -12,7 +13,8 @@ import {
   TabList,
   TabPanel,
   TabPanels,
-  Tabs
+  Tabs,
+  Tag
 } from "@chakra-ui/react";
 
 import { Menu } from "../../../types/menu/menu";
@@ -40,7 +42,13 @@ export const MenuItemModal: VFC<Props> = (props) => {
 
               <TabPanels>
                 <TabPanel>
-                  <p>{itemInfo.allergen}</p>
+                  <HStack spacing={2}>
+                    {itemInfo.allergens.map((allergen) => (
+                      <Tag key={allergen} colorScheme="orange">
+                        {allergen}
+                      </Tag>
+                    ))}
+                  </HStack>
                 </TabPanel>
                 <TabPanel>
                   <p>120kcal</p>
