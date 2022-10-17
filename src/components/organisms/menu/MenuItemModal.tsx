@@ -1,4 +1,4 @@
-import { VFC } from "react";
+import { memo, VFC } from "react";
 import {
   Button,
   HStack,
@@ -24,7 +24,7 @@ type Props = {
   onClose: () => void;
   itemInfo: Menu;
 };
-export const MenuItemModal: VFC<Props> = (props) => {
+export const MenuItemModal: VFC<Props> = memo((props) => {
   const { isOpen, onClose, itemInfo } = props;
   return (
     <>
@@ -43,7 +43,6 @@ export const MenuItemModal: VFC<Props> = (props) => {
               <TabPanels>
                 <TabPanel>
                   <HStack spacing={2}>
-                    {console.log(itemInfo.allergens)}
                     {itemInfo.allergens.length !== 0 ? (
                       itemInfo.allergens.map((allergen) => (
                         <Tag key={allergen} colorScheme="orange">
@@ -71,4 +70,4 @@ export const MenuItemModal: VFC<Props> = (props) => {
       </Modal>
     </>
   );
-};
+});
