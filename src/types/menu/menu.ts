@@ -3,4 +3,11 @@ export type Menu = {
   name: string;
   price: string;
   allergens: string[];
+  nutritions: {
+    calories: string;
+    proteins: string;
+    fat: string;
+    sodium: string;
+    carbohydrate: string;
+  };
 };
