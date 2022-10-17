@@ -55,7 +55,7 @@ export const MenuItemModal: VFC<Props> = memo((props) => {
                   </HStack>
                 </TabPanel>
                 <TabPanel>
-                  <p>120kcal</p>
+                  <p>{itemInfo.nutritions.calories}</p>
                 </TabPanel>
               </TabPanels>
             </Tabs>
