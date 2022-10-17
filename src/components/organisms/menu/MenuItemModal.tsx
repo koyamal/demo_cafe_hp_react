@@ -40,7 +40,7 @@ export const MenuItemModal: VFC<Props> = (props) => {
 
               <TabPanels>
                 <TabPanel>
-                  <p>wheat</p>
+                  <p>{itemInfo.allergen}</p>
                 </TabPanel>
                 <TabPanel>
                   <p>120kcal</p>
