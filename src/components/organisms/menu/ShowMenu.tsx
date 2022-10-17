@@ -10,11 +10,7 @@ export const ShowMenu: VFC = () => {
       {MenuItems.map((menu) => {
         return (
           <WrapItem key={menu.name}>
-            <MenuItem
-              imageUrl={menu.imageUrl}
-              name={menu.name}
-              price={menu.price}
-            />
+            <MenuItem itemInfo={menu} />
           </WrapItem>
         );
       })}
