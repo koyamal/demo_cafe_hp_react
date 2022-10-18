@@ -9,13 +9,11 @@ export const TopPage: VFC = memo(() => {
   return (
     <>
       <Header />
-      <Box>
-        <Image
-          boxSize=""
-          src="https://source.unsplash.com/Y3AqmbmtLQI"
-          onClick={onClick}
-        />
-      </Box>
+      <Image
+        boxSize=""
+        src="https://source.unsplash.com/Y3AqmbmtLQI"
+        onClick={onClick}
+      />
     </>
   );
 });
