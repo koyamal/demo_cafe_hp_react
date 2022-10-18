@@ -63,7 +63,7 @@ export const MenuItemModal: VFC<Props> = memo((props) => {
                 <TabPanel>
                   <TableContainer>
                     <Table variant="simple" colorScheme="orange">
-                      <TableCaption placement="top">
+                      <TableCaption placement="top" mt={-3}>
                         {`Nutrition Information of ${itemInfo.name}`}
                       </TableCaption>
                       <Tbody>
