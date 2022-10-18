@@ -9,16 +9,10 @@ import {
   ModalHeader,
   ModalOverlay,
   Tab,
-  Table,
-  TableCaption,
   TabList,
   TabPanel,
   TabPanels,
-  Tabs,
-  Tbody,
-  Td,
-  Tr,
-  TableContainer
+  Tabs
 } from "@chakra-ui/react";
 
 import { Menu } from "../../../types/menu/menu";
