@@ -1,7 +1,6 @@
 import { memo, VFC } from "react";
 import {
   Button,
-  HStack,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -16,7 +15,6 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
-  Tag,
   Tbody,
   Td,
   Tr,
@@ -24,6 +22,7 @@ import {
 } from "@chakra-ui/react";
 
 import { Menu } from "../../../types/menu/menu";
+import { ShowAllergen } from "../../molecules/ShowAllergen";
 
 type Props = {
   isOpen: boolean;
@@ -48,17 +47,7 @@ export const MenuItemModal: VFC<Props> = memo((props) => {
 
               <TabPanels>
                 <TabPanel>
-                  <HStack spacing={2}>
-                    {itemInfo.allergens.length !== 0 ? (
-                      itemInfo.allergens.map((allergen) => (
-                        <Tag key={allergen} colorScheme="orange">
-                          {allergen}
-                        </Tag>
-                      ))
-                    ) : (
-                      <>None</>
-                    )}
-                  </HStack>
+                  <ShowAllergen itemInfo={itemInfo} />
                 </TabPanel>
                 <TabPanel>
                   <TableContainer>
