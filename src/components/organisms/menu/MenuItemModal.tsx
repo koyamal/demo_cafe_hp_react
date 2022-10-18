@@ -23,6 +23,7 @@ import {
 
 import { Menu } from "../../../types/menu/menu";
 import { ShowAllergen } from "../../molecules/menu/ShowAllergen";
+import { ShowNutrition } from "../../molecules/menu/ShowNutrition";
 
 type Props = {
   isOpen: boolean;
@@ -50,35 +51,7 @@ export const MenuItemModal: VFC<Props> = memo((props) => {
                   <ShowAllergen itemInfo={itemInfo} />
                 </TabPanel>
                 <TabPanel>
-                  <TableContainer>
-                    <Table variant="simple" colorScheme="orange">
-                      <TableCaption placement="top" mt={-3}>
-                        {`Nutrition Information of ${itemInfo.name}`}
-                      </TableCaption>
-                      <Tbody>
-                        <Tr>
-                          <Td>Calories</Td>
-                          <Td isNumeric>{itemInfo.nutritions.calories}</Td>
-                        </Tr>
-                        <Tr>
-                          <Td>Proteins</Td>
-                          <Td isNumeric>{itemInfo.nutritions.proteins}</Td>
-                        </Tr>
-                        <Tr>
-                          <Td>Fat</Td>
-                          <Td isNumeric>{itemInfo.nutritions.fat}</Td>
-                        </Tr>
-                        <Tr>
-                          <Td>Sodium</Td>
-                          <Td isNumeric>{itemInfo.nutritions.sodium}</Td>
-                        </Tr>
-                        <Tr>
-                          <Td>Carbohydrate</Td>
-                          <Td isNumeric>{itemInfo.nutritions.carbohydrate}</Td>
-                        </Tr>
-                      </Tbody>
-                    </Table>
-                  </TableContainer>
+                  <ShowNutrition itemInfo={itemInfo} />
                 </TabPanel>
               </TabPanels>
             </Tabs>

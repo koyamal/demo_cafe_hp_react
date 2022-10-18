@@ -1,7 +1,7 @@
 import { HStack, Tag } from "@chakra-ui/react";
 import { VFC } from "react";
 
-import { Menu } from "../../types/menu/menu";
+import { Menu } from "../../../types/menu/menu";
 
 type Props = {
   itemInfo: Menu;
