@@ -22,7 +22,7 @@ import {
 } from "@chakra-ui/react";
 
 import { Menu } from "../../../types/menu/menu";
-import { ShowAllergen } from "../../molecules/ShowAllergen";
+import { ShowAllergen } from "../../molecules/menu/ShowAllergen";
 
 type Props = {
   isOpen: boolean;
