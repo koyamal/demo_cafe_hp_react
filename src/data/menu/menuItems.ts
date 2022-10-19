@@ -12,7 +12,8 @@ export const MenuItems: Menu[] = [
       fat: "3g",
       sodium: "45mg",
       carbohydrate: "31g"
-    }
+    },
+    type: "drink"
   },
   {
     imageUrl: "https://source.unsplash.com/qEcWgrTG578",
@@ -25,7 +26,8 @@ export const MenuItems: Menu[] = [
       fat: "3g",
       sodium: "45mg",
       carbohydrate: "31g"
-    }
+    },
+    type: "drink"
   },
   {
     imageUrl: "https://source.unsplash.com/nXKWLn8y9qE",
@@ -38,7 +40,8 @@ export const MenuItems: Menu[] = [
       fat: "3g",
       sodium: "45mg",
       carbohydrate: "31g"
-    }
+    },
+    type: "food"
   },
   {
     imageUrl: "https://source.unsplash.com/6jHpcBPw7i8",
@@ -51,6 +54,7 @@ export const MenuItems: Menu[] = [
       fat: "3g",
       sodium: "45mg",
       carbohydrate: "31g"
-    }
+    },
+    type: "food"
   }
 ];

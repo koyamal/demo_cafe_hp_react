@@ -23,11 +23,11 @@ export const Router: VFC = () => {
               </Route>
               <Route key={"02"} exact={true} path={`${url}/drink`}>
                 <Header />
-                <ShowMenu typeMenu="cake" />
+                <ShowMenu typeMenu="drink" />
               </Route>
               <Route key={"03"} exact={true} path={`${url}/food`}>
                 <Header />
-                "food"
+                <ShowMenu typeMenu="food" />
               </Route>
             </Switch>
           );

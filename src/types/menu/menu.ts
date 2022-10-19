@@ -10,4 +10,5 @@ export type Menu = {
     sodium: string;
     carbohydrate: string;
   };
+  type: string;
 };

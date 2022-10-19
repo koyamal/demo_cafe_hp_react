@@ -20,7 +20,7 @@ export const ShowMenu: VFC<Props> = (props) => {
             </WrapItem>
           );
         } else {
-          if (menu.name === typeMenu) {
+          if (menu.type === typeMenu) {
             return (
               <WrapItem key={menu.name}>
                 <MenuItem itemInfo={menu} />
