@@ -27,7 +27,7 @@ export const ShowMenu: VFC<Props> = (props) => {
               </WrapItem>
             );
           } else {
-            return <></>;
+            return null;
           }
         }
       })}

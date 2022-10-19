@@ -18,14 +18,14 @@ export const Router: VFC = () => {
         render={({ match: { url } }) => {
           return (
             <Switch>
-              <Route key={"01"} exact={true} path={`${url}/`}>
+              <Route exact={true} path={`${url}/`}>
                 <MenuPage />
               </Route>
-              <Route key={"02"} exact={true} path={`${url}/drink`}>
+              <Route exact={true} path={`${url}/drink`}>
                 <Header />
                 <ShowMenu typeMenu="drink" />
               </Route>
-              <Route key={"03"} exact={true} path={`${url}/food`}>
+              <Route exact={true} path={`${url}/food`}>
                 <Header />
                 <ShowMenu typeMenu="food" />
               </Route>
