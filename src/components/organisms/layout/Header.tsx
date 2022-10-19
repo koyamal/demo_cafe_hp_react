@@ -44,8 +44,6 @@ export const Header: VFC = memo(() => {
             Demo Demo Cafe
           </Heading>
         </Flex>
-        <Link onClick={onClickMenuPage}>Menu</Link>
-        <Link onClick={onClickInfoPage}>Info</Link>
         <Menu autoSelect={false}>
           <MenuButton
             bg="orange.900"
@@ -68,6 +66,7 @@ export const Header: VFC = memo(() => {
             </MenuItem>
           </MenuList>
         </Menu>
+        <Link onClick={onClickInfoPage}>Info</Link>
       </Flex>
     </>
   );
