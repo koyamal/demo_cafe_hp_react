@@ -1,4 +1,4 @@
-import { Image } from "@chakra-ui/react";
+import { Box, Image, Wrap, WrapItem } from "@chakra-ui/react";
 import { memo, VFC } from "react";
 import { Header } from "../organisms/layout/Header";
 
@@ -10,11 +10,21 @@ export const TopPage: VFC = memo(() => {
   return (
     <>
       <Header />
-      <Image
-        boxSize="100%"
-        src="https://source.unsplash.com/Y3AqmbmtLQI"
-        onClick={onClick}
-      />
+      <Wrap>
+        <WrapItem>
+          <Image
+            boxSize="500px"
+            src="https://source.unsplash.com/zlABb6Gke24"
+          />
+        </WrapItem>
+        <WrapItem>
+          <Box fontSize="20px">
+            店主こだわりの空間でゆったりとした時間を
+            <br />
+            お過ごしください
+          </Box>
+        </WrapItem>
+      </Wrap>
     </>
   );
 });
