@@ -54,12 +54,26 @@ export const Header: VFC = memo(() => {
             as={Button}
             _hover={{ bg: "orange.600", isOpen: "true" }}
             onMouseEnter={() => {
-              console.log("test");
+              onOpen();
+            }}
+            onMouseLeave={() => {
+              onClose();
             }}
           >
             Menu
           </MenuButton>
-          <MenuList border="none" w="10px" bg="orange.900">
+          <MenuList
+            mt={-2}
+            border="none"
+            bg="orange.900"
+            onMouseEnter={() => {
+              console.log(isOpen);
+              onOpen();
+            }}
+            onMouseLeave={() => {
+              onClose();
+            }}
+          >
             <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
               All
             </MenuItem>
