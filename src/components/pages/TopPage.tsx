@@ -11,7 +11,7 @@ export const TopPage: VFC = memo(() => {
     <>
       <Header />
       <Image
-        boxSize=""
+        boxSize="100%"
         src="https://source.unsplash.com/Y3AqmbmtLQI"
         onClick={onClick}
       />
