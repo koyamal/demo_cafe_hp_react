@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
   Button,
   Flex,
@@ -11,12 +10,11 @@ import {
   MenuList,
   useDisclosure
 } from "@chakra-ui/react";
-import { VFC, memo, useCallback, useState } from "react";
+import { VFC, memo, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 
 export const Header: VFC = memo(() => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [openF, setOpenF] = useState<boolean | null>(null);
 
   const history = useHistory();
   const onClickTopPage = useCallback(() => {
@@ -60,10 +58,6 @@ export const Header: VFC = memo(() => {
             }}
             onMouseLeave={() => {
               onClose();
-            }}
-            onClick={() => {
-              onOpen();
-              setOpenF(!openF);
             }}
           >
             Menu
