@@ -16,6 +16,12 @@ export const MenuHeader: VFC = () => {
   const onClickMenuPage = useCallback(() => {
     history.push("/menu");
   }, []);
+  const onClickFoodPage = useCallback(() => {
+    history.push("/menu/food");
+  }, []);
+  const onClickDrinkPage = useCallback(() => {
+    history.push("/menu/drink");
+  }, []);
 
   return (
     <Menu autoSelect={false} isOpen={isOpen}>
@@ -48,10 +54,10 @@ export const MenuHeader: VFC = () => {
         <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
           All
         </MenuItem>
-        <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
+        <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickDrinkPage}>
           Drink
         </MenuItem>
-        <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
+        <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickFoodPage}>
           Food
         </MenuItem>
       </MenuList>

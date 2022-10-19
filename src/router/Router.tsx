@@ -11,9 +11,24 @@ export const Router: VFC = () => {
       <Route exact path="/">
         <TopPage />
       </Route>
-      <Route exact path="/menu">
-        <MenuPage />
-      </Route>
+      <Route
+        path="/menu"
+        render={({ match: { url } }) => {
+          return (
+            <Switch>
+              <Route key={"01"} exact={true} path={`${url}/`}>
+                <MenuPage />
+              </Route>
+              <Route key={"02"} exact={true} path={`${url}/drink`}>
+                "drink"
+              </Route>
+              <Route key={"03"} exact={true} path={`${url}/food`}>
+                "food"
+              </Route>
+            </Switch>
+          );
+        }}
+      />
       <Route exact path="/info">
         <InfoPage />
       </Route>
