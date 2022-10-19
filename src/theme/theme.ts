@@ -13,7 +13,7 @@ const theme = extendTheme(
   },
   withDefaultColorScheme({
     colorScheme: "orange",
-    components: ["Tabs"]
+    components: ["Tabs", "Menu"]
   })
 );
 

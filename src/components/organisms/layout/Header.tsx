@@ -47,8 +47,10 @@ export const Header: VFC = memo(() => {
         <Link onClick={onClickMenuPage}>Menu</Link>
         <Link onClick={onClickInfoPage}>Info</Link>
         <Menu>
-          <MenuButton as={Button}>Menu</MenuButton>
-          <MenuList>
+          <MenuButton bg="orange.900" as={Button}>
+            Menu
+          </MenuButton>
+          <MenuList bg="orange.900">
             <MenuItem onClick={onClickMenuPage}>All</MenuItem>
           </MenuList>
         </Menu>
