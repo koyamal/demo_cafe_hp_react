@@ -8,12 +8,14 @@ import {
   Menu,
   MenuButton,
   MenuItem,
-  MenuList
+  MenuList,
+  useDisclosure
 } from "@chakra-ui/react";
 import { VFC, memo, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 
 export const Header: VFC = memo(() => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const history = useHistory();
   const onClickTopPage = useCallback(() => {
     history.push("/");
@@ -44,17 +46,20 @@ export const Header: VFC = memo(() => {
             Demo Demo Cafe
           </Heading>
         </Flex>
-        <Menu autoSelect={false}>
+        <Menu autoSelect={false} isOpen={isOpen}>
           <MenuButton
             bg="orange.900"
             _expanded={{ bg: "orange.700" }}
             _focus={{ boxShadow: "none" }}
             as={Button}
-            _hover={{ bg: "orange.600" }}
+            _hover={{ bg: "orange.600", isOpen: "true" }}
+            onMouseEnter={() => {
+              console.log("test");
+            }}
           >
             Menu
           </MenuButton>
-          <MenuList bg="orange.900">
+          <MenuList border="none" w="10px" bg="orange.900">
             <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
               All
             </MenuItem>
