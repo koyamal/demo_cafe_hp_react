@@ -7,7 +7,7 @@ export const MenuPage: VFC = memo(() => {
   return (
     <>
       <Header />
-      <ShowMenu />
+      <ShowMenu typeMenu="all" />
     </>
   );
 });

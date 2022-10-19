@@ -5,6 +5,7 @@ import { TopPage } from "../components/pages/TopPage";
 import { MenuPage } from "../components/pages/MenuPage";
 import { InfoPage } from "../components/pages/InfoPage";
 import { Header } from "../components/organisms/layout/Header";
+import { ShowMenu } from "../components/organisms/menu/ShowMenu";
 
 export const Router: VFC = () => {
   return (
@@ -22,7 +23,7 @@ export const Router: VFC = () => {
               </Route>
               <Route key={"02"} exact={true} path={`${url}/drink`}>
                 <Header />
-                "drink"
+                <ShowMenu typeMenu="cake" />
               </Route>
               <Route key={"03"} exact={true} path={`${url}/food`}>
                 <Header />
