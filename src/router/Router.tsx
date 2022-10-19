@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import { TopPage } from "../components/pages/TopPage";
 import { MenuPage } from "../components/pages/MenuPage";
 import { InfoPage } from "../components/pages/InfoPage";
+import { Header } from "../components/organisms/layout/Header";
 
 export const Router: VFC = () => {
   return (
@@ -20,9 +21,11 @@ export const Router: VFC = () => {
                 <MenuPage />
               </Route>
               <Route key={"02"} exact={true} path={`${url}/drink`}>
+                <Header />
                 "drink"
               </Route>
               <Route key={"03"} exact={true} path={`${url}/food`}>
+                <Header />
                 "food"
               </Route>
             </Switch>
