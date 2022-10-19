@@ -46,12 +46,26 @@ export const Header: VFC = memo(() => {
         </Flex>
         <Link onClick={onClickMenuPage}>Menu</Link>
         <Link onClick={onClickInfoPage}>Info</Link>
-        <Menu>
-          <MenuButton bg="orange.900" as={Button}>
+        <Menu autoSelect={false}>
+          <MenuButton
+            bg="orange.900"
+            _expanded={{ bg: "orange.700" }}
+            _focus={{ boxShadow: "none" }}
+            as={Button}
+            _hover={{ bg: "orange.600" }}
+          >
             Menu
           </MenuButton>
           <MenuList bg="orange.900">
-            <MenuItem onClick={onClickMenuPage}>All</MenuItem>
+            <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
+              All
+            </MenuItem>
+            <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
+              Drink
+            </MenuItem>
+            <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
+              Food
+            </MenuItem>
           </MenuList>
         </Menu>
       </Flex>
