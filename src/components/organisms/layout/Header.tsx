@@ -1,27 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import {
-  Button,
-  Flex,
-  Heading,
-  Link,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  useDisclosure
-} from "@chakra-ui/react";
+import { Flex, Heading, Link } from "@chakra-ui/react";
 import { VFC, memo, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 
-export const Header: VFC = memo(() => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+import { MenuHeader } from "../../molecules/header/MenuHeader";
 
+export const Header: VFC = memo(() => {
   const history = useHistory();
   const onClickTopPage = useCallback(() => {
     history.push("/");
-  }, []);
-  const onClickMenuPage = useCallback(() => {
-    history.push("/menu");
   }, []);
   const onClickInfoPage = useCallback(() => {
     history.push("/info");
@@ -46,44 +33,7 @@ export const Header: VFC = memo(() => {
             Demo Demo Cafe
           </Heading>
         </Flex>
-        <Menu autoSelect={false} isOpen={isOpen}>
-          <MenuButton
-            bg="orange.900"
-            _expanded={{ bg: "orange.700" }}
-            _focus={{ boxShadow: "none" }}
-            as={Button}
-            _hover={{ bg: "orange.600", isOpen: "true" }}
-            onMouseEnter={() => {
-              onOpen();
-            }}
-            onMouseLeave={() => {
-              onClose();
-            }}
-          >
-            Menu
-          </MenuButton>
-          <MenuList
-            mt={-2}
-            border="none"
-            bg="orange.900"
-            onMouseEnter={() => {
-              onOpen();
-            }}
-            onMouseLeave={() => {
-              onClose();
-            }}
-          >
-            <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
-              All
-            </MenuItem>
-            <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
-              Drink
-            </MenuItem>
-            <MenuItem _hover={{ bg: "orange.700" }} onClick={onClickMenuPage}>
-              Food
-            </MenuItem>
-          </MenuList>
-        </Menu>
+        <MenuHeader />
         <Link onClick={onClickInfoPage}>Info</Link>
       </Flex>
     </>
