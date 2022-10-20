@@ -17,7 +17,7 @@ export const TopPage: VFC = memo(() => {
         </WrapItem>
         <WrapItem>
           <Box w="360px" textAlign="center">
-            <Box pt={3}>
+            <Box pt={3} pb={3}>
               <Text fontSize="lg" fontWeight="bold">
                 店主こだわりの空間
               </Text>
@@ -41,7 +41,7 @@ export const TopPage: VFC = memo(() => {
         </WrapItem>
         <WrapItem>
           <Box w="360px" textAlign="center">
-            <Box pt={3}>
+            <Box pt={3} pb={3}>
               <Text fontSize="lg" fontWeight="bold">
                 特製ブレンドコーヒー
               </Text>
