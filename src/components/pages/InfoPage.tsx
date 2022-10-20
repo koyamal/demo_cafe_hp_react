@@ -6,7 +6,6 @@ export const InfoPage: VFC = memo(() => {
   return (
     <>
       <Header />
-      Info Page
       <Box align="center">
         <Box align="center" w="500px" h="300px" bg="white">
           <p>adress: A-B-202</p>
