@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Button, Flex, Heading, Link } from "@chakra-ui/react";
+import { Button, Flex, Heading } from "@chakra-ui/react";
 import { VFC, memo, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 
