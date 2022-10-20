@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Flex, Heading, Link } from "@chakra-ui/react";
+import { Button, Flex, Heading, Link } from "@chakra-ui/react";
 import { VFC, memo, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 
@@ -34,7 +34,16 @@ export const Header: VFC = memo(() => {
           </Heading>
         </Flex>
         <MenuHeader />
-        <Link onClick={onClickInfoPage}>Info</Link>
+        <Button
+          bg="orange.900"
+          _expanded={{ bg: "orange.700" }}
+          _focus={{ boxShadow: "none" }}
+          as={Button}
+          _hover={{ bg: "orange.600", isOpen: "true" }}
+          onClick={onClickInfoPage}
+        >
+          Info
+        </Button>
       </Flex>
     </>
   );
