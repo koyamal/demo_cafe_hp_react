@@ -1,5 +1,7 @@
 import { Box, Center, Image, Text, Wrap, WrapItem } from "@chakra-ui/react";
-export const ShowPicText = () => {
+import { VFC } from "react";
+
+export const ShowPicText: VFC = () => {
   return (
     <>
       <Center align="center" justify="center">
