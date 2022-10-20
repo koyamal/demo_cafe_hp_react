@@ -1,6 +1,8 @@
 import { Box, Center, Image, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import { VFC } from "react";
 
+import { topContents } from "../../molecules/top/topContents";
+
 export const ShowPicText: VFC = () => {
   return (
     <>
@@ -53,6 +55,22 @@ export const ShowPicText: VFC = () => {
                   <br />
                   挽きたてならではの香りを味わってください
                 </Text>
+              </Box>
+            </Box>
+          </WrapItem>
+        </Wrap>
+      </Center>
+      <Center>
+        <Wrap align="center" mb={4}>
+          <WrapItem>
+            <Box w="500px">
+              <Image w="500px" h="360px" src={topContents[0].path} />
+            </Box>
+          </WrapItem>
+          <WrapItem>
+            <Box w="500px" textAlign="center">
+              <Box mt={3} mb={3}>
+                {topContents[0].explanation}
               </Box>
             </Box>
           </WrapItem>
