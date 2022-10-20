@@ -1,4 +1,4 @@
-import { Box, Center, Image, Text, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Image, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import { memo, VFC } from "react";
 import { Header } from "../organisms/layout/Header";
 
@@ -6,7 +6,7 @@ export const TopPage: VFC = memo(() => {
   return (
     <>
       <Header />
-      <Wrap>
+      <Wrap align="center">
         <WrapItem>
           <Box w="360px" h="360px">
             <Image
@@ -17,7 +17,7 @@ export const TopPage: VFC = memo(() => {
         </WrapItem>
         <WrapItem>
           <Box w="360px" textAlign="center">
-            <Box pt={3} pb={3}>
+            <Box mt={3} mb={3}>
               <Text fontSize="lg" fontWeight="bold">
                 店主こだわりの空間
               </Text>
@@ -30,7 +30,7 @@ export const TopPage: VFC = memo(() => {
           </Box>
         </WrapItem>
       </Wrap>
-      <Wrap>
+      <Wrap align="center">
         <WrapItem>
           <Box w="360px" h="360px">
             <Image
@@ -41,7 +41,7 @@ export const TopPage: VFC = memo(() => {
         </WrapItem>
         <WrapItem>
           <Box w="360px" textAlign="center">
-            <Box pt={3} pb={3}>
+            <Box mt={3} mb={3}>
               <Text fontSize="lg" fontWeight="bold">
                 特製ブレンドコーヒー
               </Text>
