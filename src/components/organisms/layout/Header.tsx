@@ -33,17 +33,20 @@ export const Header: VFC = memo(() => {
             Demo Demo Cafe
           </Heading>
         </Flex>
-        <MenuHeader />
-        <Button
-          bg="orange.900"
-          _expanded={{ bg: "orange.700" }}
-          _focus={{ boxShadow: "none" }}
-          as={Button}
-          _hover={{ bg: "orange.600", isOpen: "true" }}
-          onClick={onClickInfoPage}
-        >
-          Info
-        </Button>
+        <Flex flexGrow={2}>
+          <MenuHeader />
+          <Button
+            bg="orange.900"
+            _expanded={{ bg: "orange.700" }}
+            _focus={{ boxShadow: "none" }}
+            as={Button}
+            _hover={{ bg: "orange.600", isOpen: "true" }}
+            onClick={onClickInfoPage}
+            ml={4}
+          >
+            Info
+          </Button>
+        </Flex>
       </Flex>
     </>
   );
