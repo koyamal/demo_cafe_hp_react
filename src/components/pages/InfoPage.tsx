@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import { memo, VFC } from "react";
 import { Header } from "../organisms/layout/Header";
 import { infoItems } from "../../data/info/infoItems";
@@ -8,7 +8,7 @@ export const InfoPage: VFC = memo(() => {
     <>
       <Header />
       <Box align="center">
-        <Box w="500px" h="300px" bg="white">
+        <Box w="500px" h="auto" bg="white">
           {infoItems.map((item) => {
             return (
               <Flex w="400px" key={item.title} mb={4} mt={4}>
@@ -19,6 +19,12 @@ export const InfoPage: VFC = memo(() => {
               </Flex>
             );
           })}
+          <Image
+            w="400px"
+            src="https://source.unsplash.com/BEF-7cpER3s"
+            mt={5}
+            pb={5}
+          />
         </Box>
       </Box>
     </>
