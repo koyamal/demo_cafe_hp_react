@@ -8,10 +8,10 @@ export const InfoPage: VFC = memo(() => {
     <>
       <Header />
       <Box align="center">
-        <Box w="500px" h="auto" bg="white" mt={100}>
+        <Box w="500px" h="auto" bg="white" mt={100} pt={5} pb={5}>
           {infoItems.map((item) => {
             return (
-              <Flex w="400px" key={item.title} mb={4} mt={4}>
+              <Flex w="400px" key={item.title} mb={10}>
                 <Box textAlign="left" w="150px">
                   {item.title}
                 </Box>
@@ -23,7 +23,6 @@ export const InfoPage: VFC = memo(() => {
             w="400px"
             src="https://source.unsplash.com/BEF-7cpER3s"
             mt={5}
-            pb={5}
           />
         </Box>
       </Box>
