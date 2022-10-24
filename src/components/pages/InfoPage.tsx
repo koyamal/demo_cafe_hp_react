@@ -8,7 +8,7 @@ export const InfoPage: VFC = memo(() => {
     <>
       <Header />
       <Box align="center">
-        <Box w="500px" h="auto" bg="white">
+        <Box w="500px" h="auto" bg="white" mt={100}>
           {infoItems.map((item) => {
             return (
               <Flex w="400px" key={item.title} mb={4} mt={4}>
